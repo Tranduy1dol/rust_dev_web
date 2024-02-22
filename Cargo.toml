@@ -1,0 +1,30 @@
+workspace = { members = ["integration_test"] }
+[package]
+name = "restful-api"
+version = "1.0.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tokio = {version = "1.36.0", features = ["full"]}
+serde = "1.0.196"
+serde_json = "1.0"
+warp = "0.3.6"
+chrono = "0.4.34"
+sqlx = { version = "0.7.3", features = ["postgres", "migrate", "runtime-tokio-rustls"]}
+tracing = "0.1.40"
+rust-argon2 = "2.1.0"
+rand = "0.8.5"
+tracing-subscriber = { version = "0.3.18", features = ["env-filter"] }
+paseto = "2.0.2"
+openssl = { version = "0.10.32" }
+dotenv = "0.15.0"
+clap = { version = "4.5.1", features = ["derive"] }
+handle_errors = { path = "handle-errors" }
+platforms = "3.3.0"
+config = { version = "0.14.0", features = ["toml"]}
+inline_colorization = "0.1.6"
+
+[build-dependencies]
+platforms = "2.0.0"
