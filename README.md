@@ -1,4 +1,4 @@
-# Rust assignment
+# Rust Assignment
 
 ## Description
 
